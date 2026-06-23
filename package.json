@@ -1,0 +1,17 @@
+{
+  "name": "psu-student-tracker",
+  "version": "1.0.0",
+  "description": "Student assignment deadline and timetable tracker for PSU",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server -p 3000 ."
+  },
+  "keywords": [
+    "psu",
+    "assignment-tracker",
+    "timetable",
+    "notifications"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}
