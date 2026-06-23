@@ -1,6 +1,6 @@
 /**
  * PSU Student Assignment & Timetable Tracker
- * Core Javascript Logic (Clean Single Copy)
+ * Core Javascript Logic (Fixed Single Copy)
  */
 
 // --- App State ---
@@ -88,7 +88,7 @@ function playSound(type) {
             gain.connect(audioCtx.destination);
             osc.start(now);
             osc.stop(now + 0.3);
-        });
+        } // FIXED SYNTAX ERROR: CHANGED }); TO }
     } catch (e) {
         console.error("Audio error:", e);
     }
@@ -318,6 +318,7 @@ function checkDeadlinesForNotifications() {
     saveData();
 }
 
+// Custom push notification trigger
 function triggerNativeNotification(task, daysLeft) {
     let title = `⚠️ ใกล้ส่งงาน! วิชา ${task.course || 'ทั่วไป'}`;
     let body = `งาน "${task.title}" ส่งวันที่ ${formatThaiDate(task.dateDeadline)} (${daysLeft === 0 ? 'ส่งวันนี้!' : 'อีก ' + daysLeft + ' วัน'})`;
